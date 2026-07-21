@@ -1,10 +1,8 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import { playfair, inter, manrope } from "@/lib/fonts"
+import { roboto } from "@/lib/fonts"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
-import MouseGlow from "@/components/mouse-glow"
-import WhatsAppButton from "@/components/whatsapp-button"
 
 export const metadata: Metadata = {
   title: "Jannat Radium Garage | Premium Customized Gifts",
@@ -37,16 +35,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${playfair.variable} ${inter.variable} ${manrope.variable}`}
-    >
+    <html lang="en" className={`${roboto.variable}`}>
       <body className="min-h-screen bg-background text-white antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <MouseGlow />
-        <WhatsAppButton />
       </body>
     </html>
   )

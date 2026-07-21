@@ -170,7 +170,7 @@ export default function Contact() {
               <Button
                 variant="gold"
                 size="xl"
-                className="w-full font-manrope tracking-wider uppercase"
+                className="w-full tracking-wider uppercase"
               >
                 Send Enquiry
               </Button>

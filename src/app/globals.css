@@ -8,9 +8,9 @@
   --color-accent: #D8A441;
   --color-accent-orange: #F59E0B;
   --color-muted: #BEBEBE;
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-playfair);
-  --font-button: var(--font-manrope);
+  --font-sans: var(--font-roboto);
+  --font-heading: var(--font-roboto);
+  --font-button: var(--font-roboto);
   --gold-gradient: linear-gradient(135deg, #D8A441 0%, #F59E0B 50%, #D8A441 100%);
   --gold-glow: 0 0 40px rgba(216,164,65,0.15), 0 0 80px rgba(216,164,65,0.05);
   --card-shadow: 0 8px 32px rgba(0,0,0,0.3);
@@ -28,22 +28,13 @@ html {
 body {
   background: #0A0A0A;
   color: #FFFFFF;
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   overflow-x: hidden;
 }
 
 ::selection {
   background: rgba(216, 164, 65, 0.3);
   color: #FFFFFF;
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); }
-  50% { box-shadow: 0 0 40px rgba(37, 211, 102, 0.8); }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
 }
 
 @keyframes float {

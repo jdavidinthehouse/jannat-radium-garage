@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { href: "#", label: "Home" },
@@ -62,7 +61,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-14 md:flex">
+        <nav className="hidden items-center gap-16 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -75,17 +74,6 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-
-        <a
-          href="https://wa.me/918898210320?text=Hi%20Jannat%20Radium%20Garage%2C%20I%27d%20like%20to%20enquire%20about%20your%20premium%20products."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:block"
-        >
-          <Button variant="gold" size="sm" className="font-manrope tracking-wider uppercase text-xs px-5">
-            WhatsApp
-          </Button>
-        </a>
 
         <button
           onClick={() => setMobileOpen(true)}
@@ -128,16 +116,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="https://wa.me/918898210320?text=Hi%20Jannat%20Radium%20Garage%2C%20I%27d%20like%20to%20enquire%20about%20your%20premium%20products."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6"
-          >
-            <Button variant="gold" size="xl" className="font-manrope text-lg px-10">
-              WhatsApp
-            </Button>
-          </a>
         </nav>
       </div>
     </header>

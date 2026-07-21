@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -42,8 +41,8 @@ export default function Hero() {
 
       tl.fromTo(
         heroItems,
-        { x: -40, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power4.out" },
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power4.out" },
         "-=1.2"
       )
 
@@ -51,7 +50,7 @@ export default function Hero() {
         gsap.fromTo(
           glowRef.current,
           { opacity: 0, scale: 0.5 },
-          { opacity: 0.6, scale: 1, duration: 2, ease: "power3.out", delay: 0.5 }
+          { opacity: 0.5, scale: 1, duration: 2, ease: "power3.out", delay: 0.5 }
         )
       }
 
@@ -103,24 +102,24 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex h-screen min-h-[700px] w-full items-center justify-center overflow-hidden"
+      className="relative flex h-screen min-h-[700px] w-full items-end justify-start overflow-hidden"
     >
       <div ref={imageRef} className="absolute inset-0 will-change-transform">
         <Image
           src="/images/hero-image.png"
           alt="Premium Customized Gifts"
           fill
-          className="object-cover"
+          className="object-cover object-[center_50%]"
           preload
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/85 via-[#0A0A0A]/30 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/10 to-transparent" />
 
       <div
         ref={glowRef}
-        className="absolute left-[5%] top-1/3 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none opacity-0"
+        className="absolute left-[10%] bottom-[25%] w-[450px] h-[450px] rounded-full pointer-events-none opacity-0"
         style={{
           background:
             "radial-gradient(circle, rgba(216,164,65,0.12) 0%, rgba(245,158,11,0.06) 30%, transparent 65%)",
@@ -149,46 +148,23 @@ export default function Hero() {
 
       <div
         ref={contentRef}
-        className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12"
+        className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12 pb-[15vh] md:pb-[12vh]"
       >
         <div className="max-w-lg">
           <p className="hero-item mb-5 inline-block rounded-full border border-[#D8A441]/25 bg-[#D8A441]/8 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-[#D8A441] backdrop-blur-sm">
             Premium Personalization Since 2020
           </p>
-          <h1 className="hero-item text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
-            Premium
-            <br />
+          <h1 className="hero-item text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight">
+            Premium{" "}
             <span className="gold-text">
               Customized Gifts
             </span>
           </h1>
-          <p className="hero-item mt-4 max-w-[480px] text-sm leading-relaxed text-white/45 md:text-base">
+          <p className="hero-item mt-4 max-w-[540px] text-sm leading-relaxed text-white/45 md:text-base">
             Personalized Name Plates, Acrylic Products, Premium Card Holders,
-            Wooden Gifts, Pens, Number Plates & More.
+            Wooden Gifts, Pens, Number Plates, Visiting Cards, Flex Printing,
+            Star Printing, Vinyl Printing, Sunboard Sheet Printing & More.
           </p>
-          <div className="hero-item mt-8 flex flex-wrap gap-4">
-            <Button
-              variant="gold"
-              size="lg"
-              className="font-manrope tracking-wider"
-              onClick={scrollToProducts}
-            >
-              Explore Products
-            </Button>
-            <a
-              href="https://wa.me/918898210320?text=Hi%20Jannat%20Radium%20Garage%2C%20I%27d%20like%20to%20enquire%20about%20your%20premium%20products."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant="outline"
-                size="lg"
-                className="font-manrope tracking-wider"
-              >
-                Contact on WhatsApp
-              </Button>
-            </a>
-          </div>
         </div>
       </div>
 

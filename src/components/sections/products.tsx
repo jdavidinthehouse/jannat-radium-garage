@@ -98,9 +98,6 @@ export default function Products() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#D8A441]/[0.015] to-transparent pointer-events-none" />
       <div className="mx-auto max-w-[1600px] px-[60px] lg:px-[80px]">
         <div className="mb-16 text-center">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#D8A441]">
-            Premium Collection
-          </p>
           <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl font-heading">
             Our{" "}
             <span className="gold-text">Products</span>
@@ -143,7 +140,7 @@ export default function Products() {
                   <Button
                     variant="ghost"
                     size="default"
-                    className="mt-3 w-full text-[#D8A441] hover:text-[#D8A441] font-manrope tracking-wider text-xs uppercase border border-[#D8A441]/10 hover:border-[#D8A441]/30 hover:bg-[#D8A441]/5 transition-all duration-500"
+                    className="mt-3 w-full text-[#D8A441] hover:text-[#D8A441] tracking-wider text-xs uppercase border border-[#D8A441]/10 hover:border-[#D8A441]/30 hover:bg-[#D8A441]/5 transition-all duration-500"
                   >
                     Enquire
                   </Button>
