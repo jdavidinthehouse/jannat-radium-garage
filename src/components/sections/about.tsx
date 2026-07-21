@@ -67,6 +67,8 @@ export default function About() {
                 countersStarted.current[i] = true
 
                 const target = stats[i].value
+                const suffix = stats[i].suffix
+                const proxy = { value: 0 }
 
                 if (glowEl) {
                   gsap.to(glowEl, {
@@ -76,27 +78,24 @@ export default function About() {
                   })
                 }
 
-                gsap.to(
-                  { val: 0 },
-                  {
-                    val: target,
-                    duration: 2.2,
-                    ease: "power2.out",
-                    onUpdate: function () {
-                      valEl.textContent = Math.round(this.targets()[0].val) + stats[i].suffix
-                    },
-                    onComplete: () => {
-                      valEl.textContent = target + stats[i].suffix
-                      if (glowEl) {
-                        gsap.to(glowEl, {
-                          opacity: 0,
-                          duration: 0.6,
-                          ease: "power2.inOut",
-                        })
-                      }
-                    },
-                  }
-                )
+                gsap.to(proxy, {
+                  value: target,
+                  duration: 2.2,
+                  ease: "power2.out",
+                  onUpdate: () => {
+                    valEl.textContent = Math.round(proxy.value) + suffix
+                  },
+                  onComplete: () => {
+                    valEl.textContent = target + suffix
+                    if (glowEl) {
+                      gsap.to(glowEl, {
+                        opacity: 0,
+                        duration: 0.6,
+                        ease: "power2.inOut",
+                      })
+                    }
+                  },
+                })
               },
             },
           }
