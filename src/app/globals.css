@@ -11,6 +11,7 @@
   --font-sans: var(--font-roboto);
   --font-heading: var(--font-roboto);
   --font-button: var(--font-roboto);
+  --font-serif: var(--font-bodoni);
   --gold-gradient: linear-gradient(135deg, #D8A441 0%, #F59E0B 50%, #D8A441 100%);
   --gold-glow: 0 0 40px rgba(216,164,65,0.15), 0 0 80px rgba(216,164,65,0.05);
   --card-shadow: 0 8px 32px rgba(0,0,0,0.3);

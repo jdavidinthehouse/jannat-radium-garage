@@ -21,29 +21,16 @@ const particles = Array.from({ length: 8 }, () => ({
 
 export default function Hero() {
   const sectionRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
   const glowRef = useRef<HTMLDivElement>(null)
   const particlesRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.3 })
-
-      tl.fromTo(
+      gsap.fromTo(
         imageRef.current,
         { scale: 1.15 },
         { scale: 1, duration: 2.5, ease: "power3.out" }
-      )
-
-      const heroItems = contentRef.current?.querySelectorAll(".hero-item")
-      if (!heroItems || !heroItems.length) return
-
-      tl.fromTo(
-        heroItems,
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power4.out" },
-        "-=1.2"
       )
 
       if (glowRef.current) {
@@ -144,28 +131,6 @@ export default function Hero() {
             }}
           />
         ))}
-      </div>
-
-      <div
-        ref={contentRef}
-        className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12 pb-[15vh] md:pb-[12vh]"
-      >
-        <div className="max-w-lg">
-          <p className="hero-item mb-5 inline-block rounded-full border border-[#D8A441]/25 bg-[#D8A441]/8 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-[#D8A441] backdrop-blur-sm">
-            Premium Personalization Since 2020
-          </p>
-          <h1 className="hero-item text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight">
-            Premium{" "}
-            <span className="gold-text">
-              Customized Gifts
-            </span>
-          </h1>
-          <p className="hero-item mt-4 max-w-[540px] text-sm leading-relaxed text-white/45 md:text-base">
-            Personalized Name Plates, Acrylic Products, Premium Card Holders,
-            Wooden Gifts, Pens, Number Plates, Visiting Cards, Flex Printing,
-            Star Printing, Vinyl Printing, Sunboard Sheet Printing & More.
-          </p>
-        </div>
       </div>
 
       <button
