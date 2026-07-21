@@ -19,7 +19,7 @@ export default function About() {
   const statValuesRef = useRef<(HTMLDivElement | null)[]>([])
   const statCardsRef = useRef<(HTMLDivElement | null)[]>([])
   const glowsRef = useRef<(HTMLDivElement | null)[]>([])
-  const countersStarted = useRef<boolean[]>([])
+  const counterTweens = useRef<(gsap.core.Tween | null)[]>([])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -49,54 +49,70 @@ export default function About() {
         const glowEl = glowsRef.current[i]
         if (!valEl) return
 
+        const target = stats[i].value
+        const suffix = stats[i].suffix
+
+        const startCounter = () => {
+          if (counterTweens.current[i]) {
+            counterTweens.current[i]!.kill()
+            counterTweens.current[i] = null
+          }
+          const proxy = { value: 0 }
+          valEl.textContent = "0" + suffix
+          if (glowEl) {
+            gsap.to(glowEl, { opacity: 0.6, duration: 0.3, ease: "power2.out" })
+          }
+          counterTweens.current[i] = gsap.to(proxy, {
+            value: target,
+            duration: 1.8,
+            ease: "power2.out",
+            onUpdate: () => {
+              valEl.textContent = Math.round(proxy.value) + suffix
+            },
+            onComplete: () => {
+              valEl.textContent = target + suffix
+              counterTweens.current[i] = null
+              if (glowEl) {
+                gsap.to(glowEl, { opacity: 0, duration: 0.6, ease: "power2.inOut" })
+              }
+            },
+          })
+        }
+
+        const resetCounter = () => {
+          if (counterTweens.current[i]) {
+            counterTweens.current[i]!.kill()
+            counterTweens.current[i] = null
+          }
+          valEl.textContent = "0" + suffix
+          if (glowEl) {
+            gsap.to(glowEl, { opacity: 0, duration: 0.15 })
+          }
+        }
+
+        ScrollTrigger.create({
+          trigger: statsRef.current,
+          start: "top 65%",
+          end: "bottom top",
+          onEnter: startCounter,
+          onLeave: resetCounter,
+          onEnterBack: startCounter,
+          onLeaveBack: resetCounter,
+        })
+
         gsap.fromTo(
           card,
           { scale: 0.95, opacity: 0 },
           {
             scale: 1,
             opacity: 1,
-            duration: 2.2,
-            ease: "power2.out",
+            duration: 0.9,
+            delay: i * 0.1,
+            ease: "power3.out",
             scrollTrigger: {
-              trigger: statsRef.current,
-              start: "top 60%",
+              trigger: card,
+              start: "top 85%",
               toggleActions: "play none none none",
-              once: true,
-              onEnter: () => {
-                if (countersStarted.current[i]) return
-                countersStarted.current[i] = true
-
-                const target = stats[i].value
-                const suffix = stats[i].suffix
-                const proxy = { value: 0 }
-
-                if (glowEl) {
-                  gsap.to(glowEl, {
-                    opacity: 0.6,
-                    duration: 0.3,
-                    ease: "power2.out",
-                  })
-                }
-
-                gsap.to(proxy, {
-                  value: target,
-                  duration: 2.2,
-                  ease: "power2.out",
-                  onUpdate: () => {
-                    valEl.textContent = Math.round(proxy.value) + suffix
-                  },
-                  onComplete: () => {
-                    valEl.textContent = target + suffix
-                    if (glowEl) {
-                      gsap.to(glowEl, {
-                        opacity: 0,
-                        duration: 0.6,
-                        ease: "power2.inOut",
-                      })
-                    }
-                  },
-                })
-              },
             },
           }
         )
