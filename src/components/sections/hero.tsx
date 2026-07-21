@@ -42,8 +42,8 @@ export default function Hero() {
 
       tl.fromTo(
         heroItems,
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power4.out" },
+        { x: -40, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power4.out" },
         "-=1.2"
       )
 
@@ -115,15 +115,15 @@ export default function Hero() {
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/70 via-[#0A0A0A]/40 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/85 via-[#0A0A0A]/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
 
       <div
         ref={glowRef}
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none opacity-0"
+        className="absolute left-[5%] top-1/3 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none opacity-0"
         style={{
           background:
-            "radial-gradient(circle, rgba(216,164,65,0.15) 0%, rgba(245,158,11,0.08) 30%, transparent 65%)",
+            "radial-gradient(circle, rgba(216,164,65,0.12) 0%, rgba(245,158,11,0.06) 30%, transparent 65%)",
         }}
       />
 
@@ -149,27 +149,27 @@ export default function Hero() {
 
       <div
         ref={contentRef}
-        className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12 pt-20"
+        className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12"
       >
-        <div className="max-w-3xl">
-          <p className="hero-item mb-5 inline-block rounded-full border border-[#D8A441]/25 bg-[#D8A441]/8 px-5 py-2 text-xs font-medium uppercase tracking-[0.25em] text-[#D8A441] backdrop-blur-sm">
+        <div className="max-w-lg">
+          <p className="hero-item mb-5 inline-block rounded-full border border-[#D8A441]/25 bg-[#D8A441]/8 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-[#D8A441] backdrop-blur-sm">
             Premium Personalization Since 2020
           </p>
-          <h1 className="hero-item text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl font-heading">
+          <h1 className="hero-item text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
             Premium
             <br />
             <span className="gold-text">
               Customized Gifts
             </span>
           </h1>
-          <p className="hero-item mt-5 max-w-[600px] text-base leading-relaxed text-white/50 md:text-lg">
+          <p className="hero-item mt-4 max-w-[480px] text-sm leading-relaxed text-white/45 md:text-base">
             Personalized Name Plates, Acrylic Products, Premium Card Holders,
             Wooden Gifts, Pens, Number Plates & More.
           </p>
-          <div className="hero-item mt-10 flex flex-wrap gap-5">
+          <div className="hero-item mt-8 flex flex-wrap gap-4">
             <Button
               variant="gold"
-              size="xl"
+              size="lg"
               className="font-manrope tracking-wider"
               onClick={scrollToProducts}
             >
@@ -182,7 +182,7 @@ export default function Hero() {
             >
               <Button
                 variant="outline"
-                size="xl"
+                size="lg"
                 className="font-manrope tracking-wider"
               >
                 Contact on WhatsApp
