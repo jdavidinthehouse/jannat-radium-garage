@@ -19,7 +19,7 @@ export default function About() {
   const statValuesRef = useRef<(HTMLDivElement | null)[]>([])
   const statCardsRef = useRef<(HTMLDivElement | null)[]>([])
   const glowsRef = useRef<(HTMLDivElement | null)[]>([])
-  const hasAnimated = useRef(false)
+  const countersStarted = useRef<boolean[]>([])
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -63,8 +63,8 @@ export default function About() {
               toggleActions: "play none none none",
               once: true,
               onEnter: () => {
-                if (hasAnimated.current) return
-                hasAnimated.current = true
+                if (countersStarted.current[i]) return
+                countersStarted.current[i] = true
 
                 const target = stats[i].value
 
