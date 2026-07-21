@@ -91,7 +91,7 @@ export default function Hero() {
       ref={sectionRef}
       className="relative flex h-screen min-h-[700px] w-full items-end justify-start overflow-hidden"
     >
-      <div ref={imageRef} className="absolute inset-0 will-change-transform">
+      <div ref={imageRef} className="absolute inset-x-0 top-[72px] bottom-0 will-change-transform">
         <Image
           src="/images/hero-image.png"
           alt="Premium Customized Gifts"
@@ -101,8 +101,8 @@ export default function Hero() {
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/10 to-transparent" />
+      <div className="absolute inset-x-0 top-[72px] bottom-0 bg-gradient-to-r from-[#0A0A0A]/80 via-[#0A0A0A]/20 to-transparent" />
+      <div className="absolute inset-x-0 top-[72px] bottom-0 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/10 to-transparent" />
 
       <div
         ref={glowRef}
