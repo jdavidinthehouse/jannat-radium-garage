@@ -91,9 +91,19 @@ export default function Hero() {
       ref={sectionRef}
       className="relative flex w-full items-end justify-start overflow-hidden bg-[#0A0A0A] min-h-[max(250px,50vh)] md:min-h-[max(400px,100vh)]"
     >
-      <div ref={imageRef} className="absolute inset-0 will-change-transform">
+      <div ref={imageRef} className="absolute inset-0 will-change-transform hidden md:block">
         <Image
           src="/images/hero-image.png"
+          alt="Premium Customized Gifts"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+      </div>
+      <div className="absolute inset-0 will-change-transform block md:hidden">
+        <Image
+          src="/images/hero/new-hero-mobile.webp"
           alt="Premium Customized Gifts"
           fill
           className="object-cover"

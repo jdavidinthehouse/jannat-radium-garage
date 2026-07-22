@@ -43,13 +43,13 @@ export default function Introduction() {
         </p>
 
         <h1
-          className="intro-item font-teko uppercase italic text-[24px] min-[400px]:text-[32px] sm:text-[44px] md:text-[68px] lg:text-[90px] xl:text-[105px] font-semibold leading-[1.05]"
+          className="intro-item font-teko uppercase italic text-[28px] min-[400px]:text-[36px] sm:text-[54px] md:text-[68px] lg:text-[90px] xl:text-[105px] font-semibold leading-[1.05]"
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            flexWrap: "nowrap",
-            gap: "clamp(10px, 2vw, 28px)",
+            flexWrap: "wrap",
+            gap: "clamp(6px, 1.5vw, 28px)",
           }}
         >
           <span className="text-[#D4AF37] transition-all duration-[280ms] hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">JANNAT</span>
