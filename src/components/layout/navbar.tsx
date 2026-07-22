@@ -23,6 +23,13 @@ export default function Navbar() {
     return () => { document.body.style.overflow = "" }
   }, [mobileOpen])
 
+  useEffect(() => {
+    const header = document.querySelector("header")
+    if (header) {
+      document.documentElement.style.setProperty("--navbar-height", `${header.offsetHeight}px`)
+    }
+  }, [])
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-[72px] border-b border-[#D8A441]/20 bg-[rgba(10,10,10,0.85)] backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-6 lg:px-12">

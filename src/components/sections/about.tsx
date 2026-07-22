@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import SectionGlow from "@/components/ui/section-glow"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -37,7 +38,7 @@ export default function About() {
             scrollTrigger: {
               trigger: contentRef.current,
               start: "top 80%",
-              toggleActions: "play none none none",
+              toggleActions: "restart none restart none",
             },
           }
         )
@@ -112,7 +113,7 @@ export default function About() {
             scrollTrigger: {
               trigger: card,
               start: "top 85%",
-              toggleActions: "play none none none",
+              toggleActions: "restart none restart none",
             },
           }
         )
@@ -168,8 +169,9 @@ export default function About() {
 
           <div
             ref={statsRef}
-            className="about-item mt-16 grid gap-6 sm:grid-cols-3"
+            className="about-item relative mt-16 grid gap-6 sm:grid-cols-3"
           >
+            <SectionGlow containerRef={statsRef} />
             {stats.map((stat, i) => (
               <div
                 key={stat.label}

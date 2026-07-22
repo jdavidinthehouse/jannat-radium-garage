@@ -89,14 +89,18 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-[max(700px,calc(100vh-72px))] w-full items-end justify-start overflow-hidden mt-[72px]"
+      className="relative flex w-full items-end justify-start overflow-hidden bg-[#0A0A0A]"
+      style={{
+        marginTop: "var(--navbar-height, 72px)",
+        minHeight: "max(400px, calc(100vh - var(--navbar-height, 72px)))",
+      }}
     >
       <div ref={imageRef} className="absolute inset-0 will-change-transform">
         <Image
           src="/images/hero-image.png"
           alt="Premium Customized Gifts"
           fill
-          className="object-cover object-[center_50%]"
+          className="object-cover"
           preload
         />
       </div>

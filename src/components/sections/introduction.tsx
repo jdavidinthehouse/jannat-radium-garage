@@ -26,7 +26,7 @@ export default function Introduction() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 85%",
-            toggleActions: "play none none none",
+            toggleActions: "restart none restart none",
           },
         }
       )
@@ -36,7 +36,7 @@ export default function Introduction() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-[#0A0A0A] py-[110px]">
+    <section ref={sectionRef} className="bg-[#0A0A0A] pt-[50px] pb-[120px]">
       <div className="mx-auto max-w-[1200px] px-6 text-center">
         <p className="intro-item text-xs font-semibold uppercase tracking-[8px] text-[#D8A441] mb-8">
           Premium Personalization Since 2020

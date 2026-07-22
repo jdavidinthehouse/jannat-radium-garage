@@ -35,7 +35,7 @@ export default function Contact() {
           scrollTrigger: {
             trigger: contentRef.current,
             start: "top 80%",
-            toggleActions: "play none none none",
+            toggleActions: "restart none restart none",
           },
         }
       )

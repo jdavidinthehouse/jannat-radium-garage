@@ -11,6 +11,7 @@ import {
   Smile,
   Palette,
 } from "lucide-react"
+import SectionGlow from "@/components/ui/section-glow"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -75,7 +76,7 @@ export default function WhyChooseUs() {
             scrollTrigger: {
               trigger: card as HTMLElement,
               start: "top 85%",
-              toggleActions: "play none none none",
+              toggleActions: "restart none restart none",
             },
           }
         )
@@ -86,7 +87,8 @@ export default function WhyChooseUs() {
   }, [])
 
   return (
-    <section className="relative py-28 md:py-36">
+    <section ref={sectionRef} className="relative py-28 md:py-36">
+      <SectionGlow containerRef={sectionRef} />
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mb-16 text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#D8A441]">

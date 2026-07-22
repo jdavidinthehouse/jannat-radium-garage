@@ -5,6 +5,7 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import SectionGlow from "@/components/ui/section-glow"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,7 +84,7 @@ export default function Products() {
             scrollTrigger: {
               trigger: card as HTMLElement,
               start: "top 90%",
-              toggleActions: "play none none none",
+              toggleActions: "restart none restart none",
             },
           }
         )
@@ -95,6 +96,7 @@ export default function Products() {
 
   return (
     <section id="products" ref={sectionRef} className="relative py-28 md:py-36">
+      <SectionGlow containerRef={sectionRef} />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#D8A441]/[0.015] to-transparent pointer-events-none" />
       <div className="mx-auto max-w-[1600px] px-[60px] lg:px-[80px]">
         <div className="mb-16 text-center">
