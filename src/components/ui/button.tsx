@@ -74,7 +74,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         <span className="relative z-10 flex items-center gap-2">{children}</span>
         {(variant === "gold" || variant === "default") && (
-          <span className="absolute inset-0 -z-0 bg-gradient-to-r from-[#D8A441] via-[#F59E0B] to-[#D8A441] bg-[length:200%_100%] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <span className="absolute inset-0 -z-10 bg-gradient-to-r from-[#D8A441] via-[#F59E0B] to-[#D8A441] bg-[length:200%_100%] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         )}
       </Comp>
     )

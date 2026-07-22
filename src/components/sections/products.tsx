@@ -98,7 +98,7 @@ export default function Products() {
     <section id="products" ref={sectionRef} className="relative py-28 md:py-36">
       <SectionGlow containerRef={sectionRef} />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#D8A441]/[0.015] to-transparent pointer-events-none" />
-      <div className="mx-auto max-w-[1600px] px-[60px] lg:px-[80px]">
+      <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl font-heading">
             Our{" "}

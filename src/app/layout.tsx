@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import { roboto, bodoniModa } from "@/lib/fonts"
+import { roboto, bodoniModa, teko } from "@/lib/fonts"
 import Footer from "@/components/layout/footer"
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${roboto.variable} ${bodoniModa.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${bodoniModa.variable} ${teko.variable}`}>
       <body className="min-h-screen bg-background text-white antialiased">
         <main>{children}</main>
         <Footer />

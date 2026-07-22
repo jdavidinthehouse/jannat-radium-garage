@@ -89,10 +89,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex w-full items-end justify-start overflow-hidden bg-[#0A0A0A]"
-      style={{
-        minHeight: "max(400px, 100vh)",
-      }}
+      className="relative flex w-full items-end justify-start overflow-hidden bg-[#0A0A0A] min-h-[max(250px,50vh)] md:min-h-[max(400px,100vh)]"
     >
       <div ref={imageRef} className="absolute inset-0 will-change-transform">
         <Image
@@ -110,7 +107,7 @@ export default function Hero() {
 
       <div
         ref={glowRef}
-        className="absolute left-[10%] bottom-[25%] w-[450px] h-[450px]  pointer-events-none opacity-0"
+        className="absolute left-[10%] bottom-[25%] w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] pointer-events-none opacity-0"
         style={{
           background:
             "radial-gradient(circle, rgba(216,164,65,0.12) 0%, rgba(245,158,11,0.06) 30%, transparent 65%)",

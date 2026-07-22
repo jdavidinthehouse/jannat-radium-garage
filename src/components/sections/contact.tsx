@@ -8,8 +8,6 @@ import {
   MapPin,
   Clock,
   Mail,
-  Globe,
-  Camera,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -67,7 +65,7 @@ export default function Contact() {
             <div className=" bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center  bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
-                  <Phone size={20} />
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold font-heading">Phone</h3>
@@ -143,7 +141,7 @@ export default function Contact() {
                 aria-label="Follow us on Instagram"
                 className="flex h-12 w-12 items-center justify-center  bg-[#161616] border border-white/5 text-white/35 transition-all duration-500 hover:border-[#D8A441]/30 hover:text-[#D8A441] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(216,164,65,0.1)]"
               >
-                <Camera size={20} />
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100082855436592"
@@ -152,7 +150,7 @@ export default function Contact() {
                 aria-label="Follow us on Facebook"
                 className="flex h-12 w-12 items-center justify-center  bg-[#161616] border border-white/5 text-white/35 transition-all duration-500 hover:border-[#D8A441]/30 hover:text-[#D8A441] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(216,164,65,0.1)]"
               >
-                <Globe size={20} />
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z"/></svg>
               </a>
               <a
                 href="https://wa.me/918898210320"
@@ -181,7 +179,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-item lg:col-span-3">
-            <div className="relative h-full min-h-[450px] overflow-hidden  border border-white/5 bg-[#161616] transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_50px_rgba(216,164,65,0.04)]">
+            <div className="relative h-full min-h-[300px] md:min-h-[450px] overflow-hidden  border border-white/5 bg-[#161616] transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_50px_rgba(216,164,65,0.04)]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.865238544876!2d73.29351867509922!3d19.531500342519856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be75e8b5d6b5e6b%3A0x8b5d6b5e6b5d6b5e!2sVangani%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1"
                 width="100%"
