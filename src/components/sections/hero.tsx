@@ -101,14 +101,12 @@ export default function Hero() {
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 will-change-transform block md:hidden">
-        <Image
+      <div className="absolute inset-0 block md:hidden">
+        <img
           src="/images/hero/new-hero-mobile.webp"
           alt="Premium Customized Gifts"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
+          className="absolute inset-0 h-full w-full object-cover"
+          fetchPriority="high"
         />
       </div>
 
