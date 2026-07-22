@@ -26,7 +26,7 @@ export default function Introduction() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 85%",
-            toggleActions: "restart none restart none",
+            toggleActions: "restart none restart reset",
           },
         }
       )
@@ -36,18 +36,18 @@ export default function Introduction() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-[#0A0A0A] pt-[50px] pb-[120px]">
+    <section ref={sectionRef} className="bg-[#0A0A0A] pt-[50px] pb-[70px]">
       <div className="mx-auto max-w-[1200px] px-6 text-center">
         <p className="intro-item text-xs font-semibold uppercase tracking-[8px] text-[#D8A441] mb-8">
           Premium Personalization Since 2020
         </p>
 
-        <h1 className="intro-item font-serif text-[42px] md:text-[56px] lg:text-[72px] font-bold leading-[1.15]">
+        <h1 className="intro-item font-serif text-[48px] md:text-[64px] lg:text-[84px] font-bold leading-[1.15]">
           <span className="text-white">Premium </span>
           <span className="text-[#D8A441]">Customized Gifts</span>
         </h1>
 
-        <p className="intro-item mx-auto mt-8 max-w-[1100px] text-[16px] md:text-[18px] lg:text-[22px] text-[rgba(255,255,255,0.72)] leading-relaxed">
+        <p className="intro-item mx-auto mt-8 max-w-[1100px] text-[17px] md:text-[20px] lg:text-[24px] text-[rgba(255,255,255,0.72)] leading-relaxed">
           Personalized Name Plates &bull; Acrylic Products &bull; Premium Card
           Holders &bull; Wooden Gifts &bull; Pens &bull; Number Plates &bull;
           Visiting Cards &bull; Flex Printing &bull; Star Printing &bull; Vinyl

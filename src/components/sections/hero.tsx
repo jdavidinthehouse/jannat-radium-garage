@@ -67,14 +67,14 @@ export default function Hero() {
         })
       }
 
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom top",
-        onUpdate: (self) => {
-          if (imageRef.current) {
-            imageRef.current.style.transform = `translateY(${self.progress * 40}px)`
-          }
+      gsap.to(imageRef.current, {
+        y: 40,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
         },
       })
     }, sectionRef)
@@ -91,8 +91,7 @@ export default function Hero() {
       ref={sectionRef}
       className="relative flex w-full items-end justify-start overflow-hidden bg-[#0A0A0A]"
       style={{
-        marginTop: "var(--navbar-height, 72px)",
-        minHeight: "max(400px, calc(100vh - var(--navbar-height, 72px)))",
+        minHeight: "max(400px, 100vh)",
       }}
     >
       <div ref={imageRef} className="absolute inset-0 will-change-transform">
@@ -101,7 +100,8 @@ export default function Hero() {
           alt="Premium Customized Gifts"
           fill
           className="object-cover"
-          preload
+          priority
+          sizes="100vw"
         />
       </div>
 
@@ -110,7 +110,7 @@ export default function Hero() {
 
       <div
         ref={glowRef}
-        className="absolute left-[10%] bottom-[25%] w-[450px] h-[450px] rounded-full pointer-events-none opacity-0"
+        className="absolute left-[10%] bottom-[25%] w-[450px] h-[450px]  pointer-events-none opacity-0"
         style={{
           background:
             "radial-gradient(circle, rgba(216,164,65,0.12) 0%, rgba(245,158,11,0.06) 30%, transparent 65%)",
@@ -124,7 +124,7 @@ export default function Hero() {
         {particles.map((p, i) => (
           <div
             key={i}
-            className="particle absolute rounded-full bg-[#D8A441]"
+            className="particle absolute  bg-[#D8A441]"
             style={{
               width: p.width + "px",
               height: p.height + "px",

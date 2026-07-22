@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
             scrollTrigger: {
               trigger: card as HTMLElement,
               start: "top 85%",
-              toggleActions: "restart none restart none",
+              toggleActions: "restart none restart reset",
             },
           }
         )
@@ -109,9 +109,9 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={reason.title}
-                className="reason-card group rounded-2xl bg-[#161616] border border-white/5 p-8 transition-all duration-700 hover:border-[#D8A441]/20 hover:shadow-[0_0_50px_rgba(216,164,65,0.06)] hover:-translate-y-1"
+                className="reason-card group  bg-[#161616] border border-white/5 p-8 transition-all duration-700 hover:border-[#D8A441]/20 hover:shadow-[0_0_50px_rgba(216,164,65,0.06)] hover:-translate-y-1"
               >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(216,164,65,0.25)]">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center  bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(216,164,65,0.25)]">
                   <Icon size={26} />
                 </div>
                 <h3 className="text-lg font-semibold font-heading">

@@ -52,7 +52,7 @@ export default function Navbar() {
                   isActive ? "w-full" : "w-0 group-hover:w-full"
                 }`} />
                 {isActive && (
-                  <span className="absolute inset-0 rounded-lg bg-[#D8A441]/5 blur-sm" />
+                  <span className="absolute inset-0  bg-[#D8A441]/5 blur-sm" />
                 )}
               </a>
             )

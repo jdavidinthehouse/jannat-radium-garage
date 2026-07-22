@@ -77,7 +77,7 @@ export default function ProductCategories() {
             scrollTrigger: {
               trigger: card as HTMLElement,
               start: "top 85%",
-              toggleActions: "play none none none",
+              toggleActions: "restart none restart reset",
             },
           }
         )
@@ -117,7 +117,7 @@ export default function ProductCategories() {
             return (
               <div
                 key={cat.title}
-                className="category-card group relative overflow-hidden rounded-2xl bg-[#161616] border border-white/5 transition-all duration-700 hover:border-[#D8A441]/20 hover:shadow-[0_0_60px_rgba(216,164,65,0.06)] hover:-translate-y-1"
+                className="category-card group relative overflow-hidden  bg-[#161616] border border-white/5 transition-all duration-700 hover:border-[#D8A441]/20 hover:shadow-[0_0_60px_rgba(216,164,65,0.06)] hover:-translate-y-1"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -129,7 +129,7 @@ export default function ProductCategories() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#161616] via-transparent to-transparent opacity-70" />
                 </div>
                 <div className="relative p-6 pt-0 -mt-10">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441] shadow-[0_0_20px_rgba(216,164,65,0.1)] backdrop-blur-sm border border-[#D8A441]/10">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center  bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441] shadow-[0_0_20px_rgba(216,164,65,0.1)] backdrop-blur-sm border border-[#D8A441]/10">
                     <Icon size={22} />
                   </div>
                   <h3 className="text-xl font-semibold tracking-tight font-heading">

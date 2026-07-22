@@ -38,7 +38,7 @@ export default function About() {
             scrollTrigger: {
               trigger: contentRef.current,
               start: "top 80%",
-              toggleActions: "restart none restart none",
+              toggleActions: "restart none restart reset",
             },
           }
         )
@@ -113,7 +113,7 @@ export default function About() {
             scrollTrigger: {
               trigger: card,
               start: "top 85%",
-              toggleActions: "restart none restart none",
+              toggleActions: "restart none restart reset",
             },
           }
         )
@@ -176,11 +176,11 @@ export default function About() {
               <div
                 key={stat.label}
                 ref={(el) => { statCardsRef.current[i] = el }}
-                className="relative rounded-2xl bg-[#161616] border border-white/5 p-8 text-center transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_40px_rgba(216,164,65,0.1)] hover:-translate-y-1 cursor-default"
+                className="relative  bg-[#161616] border border-white/5 p-8 text-center transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_40px_rgba(216,164,65,0.1)] hover:-translate-y-1 cursor-default"
               >
                 <div
                   ref={(el) => { glowsRef.current[i] = el }}
-                  className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 transition-opacity duration-300"
+                  className="absolute inset-0  pointer-events-none opacity-0 transition-opacity duration-300"
                   style={{
                     background:
                       "radial-gradient(circle at center, rgba(216,164,65,0.15) 0%, transparent 70%)",

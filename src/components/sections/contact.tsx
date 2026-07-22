@@ -35,7 +35,7 @@ export default function Contact() {
           scrollTrigger: {
             trigger: contentRef.current,
             start: "top 80%",
-            toggleActions: "restart none restart none",
+            toggleActions: "restart none restart reset",
           },
         }
       )
@@ -64,9 +64,9 @@ export default function Contact() {
           className="grid gap-8 lg:grid-cols-5"
         >
           <div className="contact-item space-y-6 lg:col-span-2">
-            <div className="rounded-2xl bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
+            <div className=" bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center  bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
                   <Phone size={20} />
                 </div>
                 <div>
@@ -89,9 +89,9 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="rounded-2xl bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
+            <div className=" bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center  bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
                   <Mail size={20} />
                 </div>
                 <div>
@@ -106,9 +106,9 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="rounded-2xl bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
+            <div className=" bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center  bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
                   <MapPin size={20} />
                 </div>
                 <div>
@@ -121,9 +121,9 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="rounded-2xl bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
+            <div className=" bg-[#161616] border border-white/5 p-6 transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_30px_rgba(216,164,65,0.04)]">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center  bg-gradient-to-br from-[#D8A441]/20 to-[#F59E0B]/10 text-[#D8A441]">
                   <Clock size={20} />
                 </div>
                 <div>
@@ -140,7 +140,8 @@ export default function Contact() {
                 href="https://www.instagram.com/jannat_radium_garage/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#161616] border border-white/5 text-white/35 transition-all duration-500 hover:border-[#D8A441]/30 hover:text-[#D8A441] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(216,164,65,0.1)]"
+                aria-label="Follow us on Instagram"
+                className="flex h-12 w-12 items-center justify-center  bg-[#161616] border border-white/5 text-white/35 transition-all duration-500 hover:border-[#D8A441]/30 hover:text-[#D8A441] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(216,164,65,0.1)]"
               >
                 <Camera size={20} />
               </a>
@@ -148,7 +149,8 @@ export default function Contact() {
                 href="https://www.facebook.com/profile.php?id=100082855436592"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#161616] border border-white/5 text-white/35 transition-all duration-500 hover:border-[#D8A441]/30 hover:text-[#D8A441] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(216,164,65,0.1)]"
+                aria-label="Follow us on Facebook"
+                className="flex h-12 w-12 items-center justify-center  bg-[#161616] border border-white/5 text-white/35 transition-all duration-500 hover:border-[#D8A441]/30 hover:text-[#D8A441] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(216,164,65,0.1)]"
               >
                 <Globe size={20} />
               </a>
@@ -156,7 +158,8 @@ export default function Contact() {
                 href="https://wa.me/918898210320"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#161616] border border-white/5 text-white/35 transition-all duration-500 hover:border-[#25D366]/30 hover:text-[#25D366] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,211,102,0.1)]"
+                aria-label="Chat with us on WhatsApp"
+                className="flex h-12 w-12 items-center justify-center  bg-[#161616] border border-white/5 text-white/35 transition-all duration-500 hover:border-[#25D366]/30 hover:text-[#25D366] hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(37,211,102,0.1)]"
               >
                 <Phone size={20} />
               </a>
@@ -178,7 +181,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-item lg:col-span-3">
-            <div className="relative h-full min-h-[450px] overflow-hidden rounded-2xl border border-white/5 bg-[#161616] transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_50px_rgba(216,164,65,0.04)]">
+            <div className="relative h-full min-h-[450px] overflow-hidden  border border-white/5 bg-[#161616] transition-all duration-500 hover:border-[#D8A441]/20 hover:shadow-[0_0_50px_rgba(216,164,65,0.04)]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.865238544876!2d73.29351867509922!3d19.531500342519856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be75e8b5d6b5e6b%3A0x8b5d6b5e6b5d6b5e!2sVangani%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1"
                 width="100%"

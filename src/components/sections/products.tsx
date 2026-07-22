@@ -84,7 +84,7 @@ export default function Products() {
             scrollTrigger: {
               trigger: card as HTMLElement,
               start: "top 90%",
-              toggleActions: "restart none restart none",
+              toggleActions: "restart none restart reset",
             },
           }
         )
@@ -113,7 +113,7 @@ export default function Products() {
           {products.map((product) => (
             <div
               key={product.name}
-              className="product-card group relative flex flex-col overflow-hidden rounded-2xl bg-[#1C1C1C] border border-white/[0.04] transition-all duration-700 hover:border-[#D8A441]/20 hover:shadow-[0_0_60px_rgba(216,164,65,0.1)] hover:-translate-y-2"
+              className="product-card group relative flex flex-col overflow-hidden  bg-[#1C1C1C] border border-white/[0.04] transition-all duration-700 hover:border-[#D8A441]/20 hover:shadow-[0_0_60px_rgba(216,164,65,0.1)] hover:-translate-y-2"
             >
               <div className="relative aspect-[1/1] overflow-hidden bg-[#161616]">
                 <Image
@@ -123,7 +123,7 @@ export default function Products() {
                   className="object-contain p-4 transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-40" />
-                <div className="absolute inset-0 rounded-2xl ring-0 transition-all duration-700 group-hover:ring-[0.5px] group-hover:ring-[#D8A441]/25" />
+                <div className="absolute inset-0  ring-0 transition-all duration-700 group-hover:ring-[0.5px] group-hover:ring-[#D8A441]/25" />
               </div>
               <div className="flex flex-1 flex-col justify-between p-4 pt-2.5">
                 <div>

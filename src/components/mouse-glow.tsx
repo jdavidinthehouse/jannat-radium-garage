@@ -20,7 +20,7 @@ export default function MouseGlow() {
   return (
     <div
       ref={glowRef}
-      className="pointer-events-none fixed top-0 left-0 z-[9999] hidden h-[300px] w-[300px] rounded-full opacity-[0.08] blur-[100px] transition-opacity duration-500 lg:block"
+      className="pointer-events-none fixed top-0 left-0 z-[9999] hidden h-[300px] w-[300px]  opacity-[0.08] blur-[100px] transition-opacity duration-500 lg:block"
       style={{
         background:
           "radial-gradient(circle, #D8A441 0%, #F59E0B 40%, transparent 70%)",
