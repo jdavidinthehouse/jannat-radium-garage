@@ -136,7 +136,7 @@ export default function Hero() {
 
       <button
         onClick={scrollToProducts}
-        className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white/20 transition-all duration-500 hover:text-[#D8A441]"
+        className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2 flex items-center justify-center w-11 h-11 animate-bounce text-white/20 transition-all duration-500 hover:text-[#D8A441]"
         aria-label="Scroll down"
       >
         <ArrowDown size={24} />

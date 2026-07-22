@@ -65,7 +65,7 @@ export default function SectionGlow({ containerRef, className = "" }: SectionGlo
     <div className={`absolute inset-0 pointer-events-none overflow-hidden ${className}`}>
       <div
         ref={glowRef}
-        className="absolute top-0 left-0 w-[350px] h-[350px]  opacity-0"
+        className="absolute top-0 left-0 w-[200px] h-[200px] md:w-[350px] md:h-[350px] opacity-0"
         style={{
           background:
             "radial-gradient(circle, rgba(216,164,65,0.10) 0%, rgba(216,164,65,0.03) 35%, transparent 65%)",
