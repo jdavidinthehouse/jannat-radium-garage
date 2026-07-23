@@ -103,7 +103,7 @@ export default function Hero() {
       </div>
       <div className="absolute inset-0 block md:hidden">
         <img
-          src="/images/hero/new-hero-mobile.webp"
+          src="/images/hero/mobile-hero-v2.webp"
           alt="Premium Customized Gifts"
           className="absolute inset-0 h-full w-full object-cover"
           fetchPriority="high"
